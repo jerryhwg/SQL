@@ -70,7 +70,6 @@ INSERT INTO tbl_branch
 		('Highland', 'Renton, WA'),
         ('Maplevalley', 'Newcastle, WA')
 ;
-SELECT * FROM tbl_branch;
 
 INSERT INTO tbl_publisher
 		(publisher_name, publisher_address, publisher_phone)
@@ -80,7 +79,6 @@ INSERT INTO tbl_publisher
         ('Publisher Jack', 'Newcast, WA', '313-1233'),
 		('Publisher Heart', 'Bellevue, WA', '313-1234')
 ;
-SELECT * FROM tbl_publisher;
 
 INSERT INTO tbl_books
 		(book_title, publisher_name)
@@ -106,7 +104,6 @@ INSERT INTO tbl_books
         ('Dummies for Tribe', 'Publisher Heart'),
 		('Science of Tribe', 'Publisher King')
 ;
-SELECT * FROM tbl_books;
 
 INSERT INTO tbl_authors
 		(book_id, author_name)
@@ -132,7 +129,6 @@ INSERT INTO tbl_authors
         (19, 'James Hines'),
         (20, 'Hank Aaron')
 ;
-SELECT * FROM tbl_authors;
 
 INSERT INTO tbl_book_copies
 		(book_id, branch_id, number_of_copies)
@@ -218,7 +214,6 @@ INSERT INTO tbl_book_copies
         (20, 102, 2),
         (20, 103, 2)
 ;
-SELECT * FROM tbl_book_copies;
 
 INSERT INTO tbl_borrower
 		(borrower_name, borrower_address, borrower_phone)
@@ -232,7 +227,6 @@ INSERT INTO tbl_borrower
         ('Rusell Willson', 'Bellevue, WA', '123-1237'),
         ('Steve Balmer', 'Newcastle, WA', '123-1238')
 ;
-SELECT * FROM tbl_borrower;
 
 INSERT INTO tbl_book_loans
 		(book_id, branch_id, card_no, date_out, date_due)
@@ -288,4 +282,11 @@ INSERT INTO tbl_book_loans
         (9, 100, 7, '20181029', '20181125'),
         (10, 101, 7, '20181030', '20181126')
 ;
+
+SELECT * FROM tbl_branch;
+SELECT * FROM tbl_publisher;
+SELECT * FROM tbl_books;
+SELECT * FROM tbl_authors;
+SELECT * FROM tbl_book_copies;
+SELECT * FROM tbl_borrower;
 SELECT * FROM tbl_book_loans;
