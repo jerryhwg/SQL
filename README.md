@@ -4,6 +4,8 @@
 
 Return data from all rows where there is matching data shared between the two table columns
 
+* Example
+
     ```SQL
     SELECT * 
     FROM table_A 
@@ -15,6 +17,8 @@ Return data from all rows where there is matching data shared between the two ta
 
 Return all records of data from both tables despite whether there is any actual relation link between the two tables
 (will query and return all records from both tables, regardless of whether or not the other table has a matching value)
+
+* Example
 
     ```SQL
     SELECT table_A.username, table_A.fullname, table_B.zipcodes
@@ -29,7 +33,10 @@ Return all records of data from the left table and any related data from the rig
 (return all rows from the left table, even if there are no matches within the right table)
 SELECT table_A.id, table_A.username, table_B.id, table_B.phoneNumber
 
+* Example
+
     ```SQL
+    SELECT table_A.id, table_A.username, table_B.id, table_B.phoneNumber
     FROM table_A
     LEFT JOIN table_B ON table_B.id = table.A.id
     ```
@@ -37,6 +44,8 @@ SELECT table_A.id, table_A.username, table_B.id, table_B.phoneNumber
 ### Right Join
 
 Return data from the right table and any related data from the left table, and in the event there is data that does not match it will be reflected by a Null value.
+
+* Example
 
     ```SQL
     SELECT table_A.wholesale, table_A.products, table_B.vendor, table_B.contact
@@ -52,6 +61,8 @@ In addition, any rows from the left table that do not have a matching row that e
 The columns being selected from the right side table will return NULL values.
 It can also be used to return a result set that contains all rows in the first table that do not exist in the second table by testing in the WHERE clause the value of a NOT NULL column in the second table having a NULL value. Same as using a WHERE NOT EXISTS sub-query.
 
+* Example
+
 
     ```SQL
     SELECT a1.borrower_name AS "Borrower with no book checked out"
@@ -64,6 +75,8 @@ It can also be used to return a result set that contains all rows in the first t
 
 It preserves the unmatched rows from the second (right) table, joining them with a NULL in the shape of the first (left) table. 
 A LEFT OUTER JOIN B is equivalent to B RIGHT OUTER JOIN A, with the columns in a different order.
+
+* Example
 
     ```SQL
     SELECT a1.branch_name AS "Branch Name", COUNT(a2.book_id) AS "Books Loaned"
