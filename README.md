@@ -1,4 +1,4 @@
-# SQL-Coding-Projects
+# SQL-Codings
 
 ### Inner Join
 
